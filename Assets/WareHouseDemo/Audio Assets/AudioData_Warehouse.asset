@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d401d4a0383ff04c85d36136806b487, type: 3}
+  m_Name: AudioData_Warehouse
+  m_EditorClassIdentifier: 
+  data:
+  - audioName: 1
+    clip: {fileID: 8300000, guid: e1fb63dacb67bf64989bd89c99ba6d7d, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 0
+    clip: {fileID: 8300000, guid: d22cad58d47fc164ba9baf7314e6a90f, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 2
+    clip: {fileID: 8300000, guid: 897b896fedb9e5f4e8137cbcf7b8064c, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 3
+    clip: {fileID: 8300000, guid: 5faa4e97c386c4c4c917089ed3a177dd, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
