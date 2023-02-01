@@ -27,6 +27,7 @@ namespace Ui.ScoreSystem
         {
         
             _maxScore = _maxScore + maxScore;
+            _score =  _score + score;
             scoreTextMeshProUGUI.text = _score.ToString();
             maxScoreTextMeshProUGUI.text = _maxScore.ToString();
 

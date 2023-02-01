@@ -1,11 +1,13 @@
 using TMPro;
+using Ui.ScoreSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using Utilities;
 
-public class QuizCompletePanel : MonoBehaviour
+public class QuizCompletePanel : MonoSingleton<QuizCompletePanel>
 {
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private TextMeshProUGUI messegeTextMeshProUGUI;
     [SerializeField] private Button assessmentAgainBtn;
     void Start()
     {
@@ -20,6 +22,7 @@ public class QuizCompletePanel : MonoBehaviour
 
     internal void BringPanel()
     {
+        messegeTextMeshProUGUI.text = "You have scored " + ScoreManager.Instance.GetScore().ToString() + "out of" + ScoreManager.Instance.GetMaxScore().ToString();
         canvasGroup.UpdateState(true);
     }
 

@@ -1,4 +1,5 @@
 using System;
+using Ui.ScoreSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using Utilities;
@@ -43,25 +44,7 @@ namespace GamePlay.Quiz
             
             canvasGroup.UpdateState(true);
         }
-        //private void DestroyExistingPrefab()
-        //{
-        //    if (_isQuizWithModel)
-        //    {
-        //        for (int i = quizPanelTextOnly.transform.childCount - 1; i >= 0; i--)
-        //        {
-        //            DestroyImmediate(quizPanelTextOnly.transform.GetChild(i).gameObject);
-        //        }
-        //    }
-        //    _wrongAttempt = 0;
-        //}
 
-        //internal void DestroyExistingPrefab()
-        //{
-        //    for (int i = 0; i < quizPanelTextOnly.childCount; i++)
-        //    {
-        //        Destroy(quizPanelTextOnly.GetChild(i).gameObject);
-        //    }
-        //}
 
         private void DestroyExistingPrefab()
         {
@@ -77,14 +60,19 @@ namespace GamePlay.Quiz
 
         private void OnCorrectButtonSelected()
         {
-            if (_isQuizWithModel)
+            //if (_isQuizWithModel)
+            //{
+            //    for (int i = quizPanelTextOnly.transform.childCount - 1; i >= 0; i--)
+            //    {
+            //        quizPanelTextOnly.transform.GetChild(i).GetComponent<Button>().interactable = false;
+            //    }
+            //}
+
+            for (int i = quizPanelTextOnly.transform.childCount - 1; i >= 0; i--)
             {
-                for (int i = quizPanelTextOnly.transform.childCount - 1; i >= 0; i--)
-                {
-                    quizPanelTextOnly.transform.GetChild(i).GetComponent<Button>().interactable = false;
-                }
+                quizPanelTextOnly.transform.GetChild(i).GetComponent<Button>().interactable = false;
             }
-            
+            ScoreManager.Instance.UpdateScore(10,10);
             Invoke(nameof(ActionDelay), 1f);
         }
 
@@ -97,12 +85,23 @@ namespace GamePlay.Quiz
         }
         private void OnWrongButtonSelected()
         {
-            _wrongAttempt++;
-            _numberOfAttempts--;
-
-            if (_numberOfAttempts == 0)
-                BringOutEffect(_onWrongOption);
+            // BringOutEffect(_onWrongOption);
+            for (int i = quizPanelTextOnly.transform.childCount - 1; i >= 0; i--)
+            {
+                quizPanelTextOnly.transform.GetChild(i).GetComponent<Button>().interactable = false;
+            }
+            ScoreManager.Instance.UpdateScore(0, 10);
+            Invoke(nameof(ActionDelayForWrong), 1f);
         }
+
+        private void ActionDelayForWrong()
+        {
+            BringOutEffect(() =>
+            {
+                _onWrongOption?.Invoke();
+            });
+        }
+
         private void BringOutEffect(Action onFadeComplete)
         {
             if (_isQuizWithModel)
