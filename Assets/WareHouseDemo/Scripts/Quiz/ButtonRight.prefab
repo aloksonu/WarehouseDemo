@@ -272,4 +272,4 @@ MonoBehaviour:
   buttonTextComponent: {fileID: 6925140387570047121}
   quizButton: {fileID: 6925140387845586499}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
-  clickedColor: {r: 0.030865014, g: 0.4989562, b: 0.9622642, a: 1}
+  clickedColor: {r: 0.03137252, g: 0.9607843, b: 0.1925812, a: 1}

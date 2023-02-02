@@ -4,11 +4,11 @@ using Utilities;
 
 public class WarehouseQuiz : MonoSingleton<WarehouseQuiz>
 {
-    private const string QUIZ01 = "What is the heart of the warehouse.?";
-    private const string QUIZ01_A = "Data warehouse database servers.";
-    private const string QUIZ01_B = " Data mining database servers.";
-    private const string QUIZ01_C = "Data mart database servers.";
-    private const string QUIZ01_D = "Relational data base servers.";
+    private const string QUIZ01 = "Whats the process of storing goods in warehouse called which also involves picking items from inventory and placing them on a pallet or shelf?";
+    private const string QUIZ01_A = "Put Away.";
+    private const string QUIZ01_B = "Importing.";
+    private const string QUIZ01_C = "Exporting.";
+    private const string QUIZ01_D = "Storage.";
 
     private const string QUIZ02 = "......... is a subject-oriented, integrated, time-variant, nonvolatile collection of data in supportofmanagement decisions.";
     private const string QUIZ02_A = "Data Warehousing.";
