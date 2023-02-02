@@ -10,7 +10,7 @@ public class WarehouseQuiz : MonoSingleton<WarehouseQuiz>
     private const string QUIZ01_C = "Exporting.";
     private const string QUIZ01_D = "Storage.";
 
-    private const string QUIZ02 = "......... is a subject-oriented, integrated, time-variant, nonvolatile collection of data in supportofmanagement decisions.";
+    private const string QUIZ02 = "......... is a subject-oriented, integrated, time-variant, nonvolatile collection of data in support of management decisions.";
     private const string QUIZ02_A = "Data Warehousing.";
     private const string QUIZ02_B = "Data Mining.";
     private const string QUIZ02_C = "Web Mining.";
