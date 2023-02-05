@@ -1099,6 +1099,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 187818894}
   panelText: {fileID: 65856430}
+  textContainerImage: {fileID: 187818891}
+  randomColor:
+  - {r: 0.85098046, g: 0.89019614, b: 0.9568628, a: 1}
+  - {r: 0.73333335, g: 0.84705883, b: 0.8392157, a: 1}
+  - {r: 0.9811321, g: 0.78179795, b: 0.059238106, a: 1}
+  - {r: 0, g: 0.6901961, b: 0.7843138, a: 1}
+  - {r: 0.5921569, g: 0.77647066, b: 0.30980393, a: 1}
 --- !u!225 &187818894
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1811,6 +1818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whareHouseSPR: {fileID: 21300000, guid: 05aca2a8161a66f47851297d3c092313, type: 3}
+  whareHouseReceivingSPR: {fileID: 21300000, guid: 850b162c0d4670e47a263ee58b2c7274, type: 3}
   characterBoy: {fileID: 220093441}
   characterGirl: {fileID: 1623340772}
   _narratorHandelerBoy: {fileID: 187818893}
@@ -7572,7 +7580,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 101
+  m_SortingOrder: 104
   m_TargetDisplay: 0
 --- !u!224 &2105860488
 RectTransform:
@@ -7687,6 +7695,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2111242060}
   panelText: {fileID: 77062202}
+  textContainerImage: {fileID: 2111242057}
+  randomColor:
+  - {r: 0.8509804, g: 0.8901961, b: 0.95686275, a: 1}
+  - {r: 0.73333335, g: 0.8470589, b: 0.83921576, a: 1}
+  - {r: 0.9811321, g: 0.78179795, b: 0.059238106, a: 1}
+  - {r: 0, g: 0.6901961, b: 0.78431374, a: 1}
+  - {r: 0.5921569, g: 0.7764706, b: 0.30980393, a: 1}
 --- !u!225 &2111242060
 CanvasGroup:
   m_ObjectHideFlags: 0

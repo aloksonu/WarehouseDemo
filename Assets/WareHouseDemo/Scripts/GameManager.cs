@@ -37,8 +37,14 @@ public class GameManager : MonoBehaviour
     private const string NC22 = "Shipping Software";
     private const string NC23 = "Service";
 
+    private const string NC24 = "<b> Receiving</b>  the collection of activities involved in:";
+    private const string NC25 = "\u2022<indent=1em> the orderly receipt of all materials coming into the warehouse.</indent>";
+    private const string NC26 = "\u2022<indent=1em> providing the assurance that the quantity and quality of such materials are as ordered.</indent>";
+    private const string NC27 = "\u2022<indent=1em> disbursing materials to storage or to other organizational functions requiring them.</indent>";
+
 
     [SerializeField] Sprite whareHouseSPR;
+    [SerializeField] Sprite whareHouseReceivingSPR;
     //[SerializeField] Image characterBoy;
     //[SerializeField] Image characterGirl;
     [SerializeField] GameObject characterBoy;
@@ -61,8 +67,8 @@ public class GameManager : MonoBehaviour
     {
         characterBoy.GetComponent<Transform>().DOMoveX(-5.38f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(5.38f, 2f);
-        //Invoke(nameof(FunNJ01), 2.2f);
-        Invoke(nameof(FunNC14), 2.2f);
+        Invoke(nameof(FunNJ01), 2.2f);
+        //Invoke(nameof(FunNC14), 2.2f);
     }
 
     private void FunNJ01()
@@ -252,8 +258,23 @@ public class GameManager : MonoBehaviour
     private void HideFunNC15()
     {
         _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNC04), 1);
+        Invoke(nameof(FunNC16), 1);
     }
+
+    private void FunNC16()
+    {
+        _narratorHandelerGirl.BringInNarrator(NC24 + "<br>" + NC25 + "<br>" + NC26 + "<br>" + NC27, 1f);
+        ImageHandeler.Instance.BringPanel(whareHouseReceivingSPR);
+        Invoke(nameof(HideFunNC16), timeToHoldMAx);
+    }
+
+    private void HideFunNC16()
+    {
+        //_narratorHandelerGirl.BringOutNarrator();
+        //ImageHandeler.Instance.BringOutPanel();
+        //Invoke(nameof(FunNC04), 1);
+    }
+
     private void BringWarehouseCompletePanel()
     {
         WarehouseTrainingCompletePanel.Instance.BringPanel();
