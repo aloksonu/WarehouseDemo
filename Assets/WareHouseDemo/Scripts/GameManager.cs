@@ -5,27 +5,39 @@ using Audio.Warehouse;
 
 public class GameManager : MonoBehaviour
 {
-    private const string NJ01 = "This is James, after working for several years, He has finally managed to save some money," +
-        " He’s now starting his own business. But unfortunately for him all of the essentials he bought were lost." +
-        " So now he’s trying to find them. Help him find them and setup his business.";
-    private const string NC02 = "Hi,Sure, please tell me, How can I help you?";
-    private const string NJ03 = "I’m here to find out my stuff, Unfortunately I’ve lost the details of my shipment. Can you help me find it";
-    private const string NC04 = "Sure, that’d be no issue. I can also help you to get you super strength & speed" +
-        " while we’re at it so that you can easily lift them up and carry them out of here so that " +
-        "you won’t have to spend some extra bucks on transporting them.";
-    private const string NJ05 = "What?";
-    private const string NC06 = "That was a sarcasm! Jeez, you really have no idea about how things work around here do you?";
-    private const string NJ07 = "All I know is that all my stuff was supposed to be delivered to me but it didn’t happen. So now I just want my stuff back. That’s it";
-    private const string NC08 = "Dude! Look around you we’re in this giant warehouse where there are lots of boxes " +
-        "and the only way to Identify them is with the shipment number which you lost!";
-    private const string NJ09 = "Phew! Is there any way around that’d help me to find my stuff. I’ve worked way hard all these years." +
-        "I can’t have everything go down the drain just because of my stupid mistake";
-    private const string NJ10 = "I think we got on the wrong foot here. Can you help me understand this process. " +
-        "So that I’ll be able to find out where my package is exactly.";
-    private const string NC11 = "Sure! I’ll help you out. But don’t take all day I’ve lots of work to do.";
-    private const string NJ12 = "Ok. So can you tell me what’s a warehouse? And how do these things operate?";
-    private const string NC13 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops.";
-    private const string NC14 = "The major warehouse operations are:";
+    // P1 A   Answer
+    // P2 B   Question
+
+    private const string AN01 = "Hi how’re you";
+    private const string BN02 = "I’m good, How was you’re weekend";
+    private const string AN03 = "Nothing much, what about you";
+    private const string BN04 = "Just went to beach with my family";
+    private const string AN05 = "Nice, So how was it";
+    private const string BN06 = "Very nice & Calming, A much needed gate away. Enjoyed the sunsets, the food & some quality time";
+    private const string AN07 = "Sounds really awesome";
+    private const string BN08 = "Yes It was";
+    private const string AN09 = "So, what are you working on nowadays";
+    private const string BN10 = "Oh! It’s just a new project that was assigned to me but I’ve no idea about it, So I’m hoping to find someone" +
+                                "who knows about the field my client is into";
+    private const string AN11 = "Ok & what’s that";
+    private const string BN12 = "He’s into warehouse automation";
+    private const string AN13 = "is that so? Don’t worry then, I’ll help you out";
+    private const string BN14 = "You serious? You’ve idea about this field? If you help me out it’d be really helpful";
+    private const string AN15 = "Yes, I mean I’ve been working in the similar field for over a decade now";
+    private const string BN16 = "You really are a lifesaver";
+    private const string AN17 = "Yeah, So whatever you want just ask right away";
+    private const string BN18 = "Yeah Sure!, Let me just get my notes I’ve somethings I need answers for. I’ll ask you about them one by one is that okay";
+    private const string AN19 = "Yeah no worries";
+    private const string BN20 = "So, Let’s start with the basics what’s a warehouse";
+    private const string AN21 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops";
+    private const string BN22 = "ok, Now I do have some terminologies that I didn’t understand here, can you explain them to me";
+    private const string AN23 = "Yeah";
+    private const string BN24 = "So there’s something written over here like Inbound, Whats that";
+    private const string AN25 = "You mean Inbound logistics, so its basically the way materials and other goods are brought into a company";
+    private const string BN26 = "Ok so what are steps are there related with this Inbound logistics";
+    private const string AN27 = "Usually This process includes the steps to order, receive, store, transport and manage incoming supplies";
+    private const string BN28 = "Ok pease can you tell me about warehouse receiving";
+    private const string AN29 = "Yes The warehouse receiving process steps include delivery of the products, unloading from the delivery trunk, and inventory storage";
 
     private const string NC15 = "Inbound:";
     private const string NC16 = "Receiving";
@@ -45,14 +57,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Sprite whareHouseSPR;
     [SerializeField] Sprite whareHouseReceivingSPR;
-    //[SerializeField] Image characterBoy;
-    //[SerializeField] Image characterGirl;
     [SerializeField] GameObject characterBoy;
     [SerializeField] GameObject characterGirl;
 
-    [SerializeField] NarratorHandler _narratorHandelerBoy;
-    [SerializeField] NarratorHandler _narratorHandelerGirl;
-
+    [SerializeField] NarratorHandler _narratorHandeler;
 
     private const float timeToHoldMAx = 6f;
 
@@ -67,214 +75,175 @@ public class GameManager : MonoBehaviour
     {
         characterBoy.GetComponent<Transform>().DOMoveX(-5.38f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(5.38f, 2f);
-        Invoke(nameof(FunNJ01), 2.2f);
-        //Invoke(nameof(FunNC14), 2.2f);
+        Invoke(nameof(CallA01), 2.2f);
+       // Invoke(nameof(CallB28), 2.2f);
     }
 
-    private void FunNJ01()
+    private void CallA01()
     {
-        _narratorHandelerBoy.BringInNarrator(NJ01, 1f);
-        Invoke(nameof(HideFunNJ01), timeToHoldMAx);
-
-        //_narratorHandelerBoy.BringInNarrator(NJ01, 1f, () => GenericAudioManager.Instance.PlaySound(AudioName.IntroBoy));
-        //Invoke(nameof(HideFirstNarratorByBoy), GenericAudioManager.Instance.GetAudioLength(AudioName.IntroBoy) + 1);
+        _narratorHandeler.BringInNarrator(AN01,NarratorName.A, 1f, AudioName.NA01, CallB02);
     }
 
-    private void HideFunNJ01()
+
+    private void CallB02()
     {
-        _narratorHandelerBoy.BringOutNarrator();
-        Invoke(nameof(FunNC02), 1);
+        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, 1f, AudioName.NB02, CallA03);
     }
 
-    private void FunNC02()
+
+    private void CallA03()
     {
-        _narratorHandelerGirl.BringInNarrator(NC02, 1f);
-        Invoke(nameof(HideFunNC02), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN03, NarratorName.A, 1f, AudioName.NA03, CallB04);
     }
-
-    private void HideFunNC02()
+    private void CallB04()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNJ03), 1);
-
+        _narratorHandeler.BringInNarrator(BN04, NarratorName.B, 1f, AudioName.NB04, CallA05);
     }
 
-    private void FunNJ03()
+    private void CallA05()
     {
-        _narratorHandelerBoy.BringInNarrator(NJ03, 1f);
-        Invoke(nameof(HideFunNJ03), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN05, NarratorName.A, 1f, AudioName.NA05, CallB06);
     }
 
-    private void HideFunNJ03()
+
+    private void CallB06()
     {
-        _narratorHandelerBoy.BringOutNarrator();
-        Invoke(nameof(FunNC04), 1);
+        _narratorHandeler.BringInNarrator(BN06, NarratorName.B, 1f, AudioName.NB06, CallA07);
     }
 
-    private void FunNC04()
+
+    private void CallA07()
     {
-        _narratorHandelerGirl.BringInNarrator(NC04, 1f);
-        Invoke(nameof(HideFunNC04), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN07, NarratorName.A, 1f, AudioName.NA07, CallB08);
     }
-
-    private void HideFunNC04()
+    private void CallB08()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNJ05), 1);
+        _narratorHandeler.BringInNarrator(BN08, NarratorName.B, 1f, AudioName.NB08, CallA09);
     }
 
-    private void FunNJ05()
+    private void CallA09()
     {
-        _narratorHandelerBoy.BringInNarrator(NJ05, 1f);
-        Invoke(nameof(HideFunNJ05), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN09, NarratorName.A, 1f, AudioName.NA09, CallB10);
     }
 
-    private void HideFunNJ05()
+
+    private void CallB10()
     {
-        _narratorHandelerBoy.BringOutNarrator();
-        Invoke(nameof(FunNC06), 1);
+        _narratorHandeler.BringInNarrator(BN10, NarratorName.B, 1f, AudioName.NB10, CallA11);
     }
 
-    private void FunNC06()
+
+    private void CallA11()
     {
-        _narratorHandelerGirl.BringInNarrator(NC06, 1f);
-        Invoke(nameof(HideFunNC06), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN11, NarratorName.A, 1f, AudioName.NA11, CallB12);
     }
-
-    private void HideFunNC06()
+    private void CallB12()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNJ07), 1);
-
+        _narratorHandeler.BringInNarrator(BN12, NarratorName.B, 1f, AudioName.NB12, CallA13);
     }
 
-    private void FunNJ07()
+    private void CallA13()
     {
-        _narratorHandelerBoy.BringInNarrator(NJ07, 1f);
-        Invoke(nameof(HideFunNJ07), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, 1f, AudioName.NA13, CallB14);
     }
 
-    private void HideFunNJ07()
+
+    private void CallB14()
     {
-        _narratorHandelerBoy.BringOutNarrator();
-        Invoke(nameof(FunNC08), 1);
+        _narratorHandeler.BringInNarrator(BN14, NarratorName.B, 1f, AudioName.NA13, CallA15);
     }
 
-    private void FunNC08()
+
+    private void CallA15()
     {
-        _narratorHandelerGirl.BringInNarrator(NC08, 1f);
-        Invoke(nameof(HideFunNC08), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN15, NarratorName.A, 1f, AudioName.NA13, CallB16);
     }
-
-    private void HideFunNC08()
+    private void CallB16()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNJ09), 1);
-
+        _narratorHandeler.BringInNarrator(BN16, NarratorName.B, 1f, AudioName.NA13, CallA17);
     }
-
-    private void FunNJ09()
+    private void CallA17()
     {
-        _narratorHandelerBoy.BringInNarrator(NJ09, 1f);
-        Invoke(nameof(HideFunNJ09), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN17, NarratorName.A, 1f, AudioName.NA13, CallB18);
     }
 
-    private void HideFunNJ09()
+
+    private void CallB18()
     {
-        _narratorHandelerBoy.BringOutNarrator();
-        Invoke(nameof(FunNJ10), 1);
+        _narratorHandeler.BringInNarrator(BN18, NarratorName.B, 1f, AudioName.NA13, CallA19);
     }
 
-    private void FunNJ10()
+
+    private void CallA19()
     {
-        _narratorHandelerBoy.BringInNarrator(NJ10, 1f);
-        Invoke(nameof(HideFunNJ10), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN19, NarratorName.A, 1f, AudioName.NA13, CallB20);
     }
-
-    private void HideFunNJ10()
+    private void CallB20()
     {
-        _narratorHandelerBoy.BringOutNarrator();
-        Invoke(nameof(FunNC11), 1);
+        _narratorHandeler.BringInNarrator(BN20, NarratorName.B, 1f, AudioName.NA13, CallA21);
     }
 
-    private void FunNC11()
+    private void CallA21()
     {
-        _narratorHandelerGirl.BringInNarrator(NC11, 1f);
-        Invoke(nameof(HideFunNC11), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(AN21, NarratorName.A, 1f, AudioName.NA13, CallImageForWharehouse);
     }
 
-    private void HideFunNC11()
+    private void CallImageForWharehouse()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNJ12), 1);
-
+        ImageHandeler.Instance.BringPanel(whareHouseSPR, CallB22);
     }
 
-    private void FunNJ12()
+    private void CallB22()
     {
-        _narratorHandelerBoy.BringInNarrator(NJ12, 1f);
-        Invoke(nameof(HideFunNJ12), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(BN22, NarratorName.B, 1f, AudioName.NA13, CallA23);
     }
 
-    private void HideFunNJ12()
+
+    private void CallA23()
     {
-        _narratorHandelerBoy.BringOutNarrator();
-        Invoke(nameof(FunNC13), 1);
+        _narratorHandeler.BringInNarrator(AN23, NarratorName.A, 1f, AudioName.NA13, CallB24);
     }
-
-    private void FunNC13()
+    private void CallB24()
     {
-        _narratorHandelerGirl.BringInNarrator(NC13, 1f);
-        ImageHandeler.Instance.BringPanel(whareHouseSPR);
-        Invoke(nameof(HideFunNC13), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(BN24, NarratorName.B, 1f, AudioName.NA13, CallA25);
     }
 
-    private void HideFunNC13()
+    private void CallA25()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        ImageHandeler.Instance.BringOutPanel();
-        Invoke(nameof(FunNC14), 1);
-
+        _narratorHandeler.BringInNarrator(AN25, NarratorName.A, 1f, AudioName.NA13, CallB26);
     }
-
-    private void FunNC14()
+    private void CallB26()
     {
-        _narratorHandelerGirl.BringInNarrator(NC14+ "<br>"+NC15 + "<br>" + NC16 + "<br>" + NC17 + "<br>" + NC18, 1f);
-        Invoke(nameof(HideFunNC14), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(BN26, NarratorName.B, 1f, AudioName.NA13, CallA27);
     }
 
-    private void HideFunNC14()
+    private void CallA27()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNC15), 1);
+        _narratorHandeler.BringInNarrator(AN27, NarratorName.A, 1f, AudioName.NA13, CallB28);
     }
-
-    private void FunNC15()
+    private void CallB28()
     {
-        _narratorHandelerGirl.BringInNarrator(NC19 + "<br>" + NC20 + "<br>" + NC21 + "<br>" + NC22 + "<br>" + NC23, 1f);
-        Invoke(nameof(HideFunNC15), timeToHoldMAx);
+        _narratorHandeler.BringInNarrator(BN28, NarratorName.B, 1f, AudioName.NA13, CallA29);
     }
 
-    private void HideFunNC15()
+    private void CallA29()
     {
-        _narratorHandelerGirl.BringOutNarrator();
-        Invoke(nameof(FunNC16), 1);
+        _narratorHandeler.BringInNarrator(AN29, NarratorName.A, 1f, AudioName.NA13, CallImageForWharehouseReceving);
     }
 
-    private void FunNC16()
+    private void CallImageForWharehouseReceving()
     {
-        _narratorHandelerGirl.BringInNarrator(NC24 + "<br>" + NC25 + "<br>" + NC26 + "<br>" + NC27, 1f);
-        ImageHandeler.Instance.BringPanel(whareHouseReceivingSPR);
-        Invoke(nameof(HideFunNC16), timeToHoldMAx);
+        ImageHandeler.Instance.BringPanel(whareHouseReceivingSPR, CallB30);
     }
-
-    private void HideFunNC16()
+    private void CallB30()
     {
-        //_narratorHandelerGirl.BringOutNarrator();
-        //ImageHandeler.Instance.BringOutPanel();
-        //Invoke(nameof(FunNC04), 1);
+       // _narratorHandeler.BringInNarrator(BN26, NarratorName.B, 1f, AudioName.NB12, CallA27);
     }
 
+    private void CallA31()
+    {
+        _narratorHandeler.BringInNarrator(AN27, NarratorName.A, 1f, AudioName.NB12, CallImageForWharehouse);
+    }
     private void BringWarehouseCompletePanel()
     {
         WarehouseTrainingCompletePanel.Instance.BringPanel();

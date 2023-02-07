@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AudioData_Warehouse
   m_EditorClassIdentifier: 
   data:
-  - audioName: 1
-    clip: {fileID: 8300000, guid: e1fb63dacb67bf64989bd89c99ba6d7d, type: 3}
+  - audioName: 0
+    clip: {fileID: 8300000, guid: 7c6e36c6def10f24f907deca04e1f5db, type: 3}
     soundType: 0
     audioSources:
     - {fileID: 0}
@@ -23,8 +23,8 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     rapidSingleShotSound: 0
-  - audioName: 0
-    clip: {fileID: 8300000, guid: d22cad58d47fc164ba9baf7314e6a90f, type: 3}
+  - audioName: 1
+    clip: {fileID: 8300000, guid: e5cfcde60ca8e6d4eb3bdeb463d37b15, type: 3}
     soundType: 0
     audioSources:
     - {fileID: 0}
@@ -34,7 +34,7 @@ MonoBehaviour:
     playOnAwake: 0
     rapidSingleShotSound: 0
   - audioName: 2
-    clip: {fileID: 8300000, guid: 897b896fedb9e5f4e8137cbcf7b8064c, type: 3}
+    clip: {fileID: 8300000, guid: a888d3b71ec846c47a8dbb99b2429f43, type: 3}
     soundType: 0
     audioSources:
     - {fileID: 0}
@@ -44,11 +44,101 @@ MonoBehaviour:
     playOnAwake: 0
     rapidSingleShotSound: 0
   - audioName: 3
-    clip: {fileID: 8300000, guid: 5faa4e97c386c4c4c917089ed3a177dd, type: 3}
+    clip: {fileID: 8300000, guid: 2968af7aaa862e042850ab0dd5baea6a, type: 3}
     soundType: 0
     audioSources:
     - {fileID: 0}
     volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 4
+    clip: {fileID: 8300000, guid: 5f6d970b9e353ba41ad54ca407195475, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 5
+    clip: {fileID: 8300000, guid: 8a126f1d7fe494e4c92b86e2fbbb988b, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 6
+    clip: {fileID: 8300000, guid: 2f07452b95d6ae049a269f7c3825ee27, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 7
+    clip: {fileID: 8300000, guid: ee9f61800d74d0144a5c64e3810f8e8a, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 8
+    clip: {fileID: 8300000, guid: d46f9bb997afca54d85f5fe958ace473, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 9
+    clip: {fileID: 8300000, guid: ee35524ed1b40654aae63f2562c9684e, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 10
+    clip: {fileID: 8300000, guid: 0dc6952a0edbab64ab53d9ff514c9747, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 11
+    clip: {fileID: 8300000, guid: eda009c8ef3eed7459830f603e2e67e3, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 12
+    clip: {fileID: 8300000, guid: eda009c8ef3eed7459830f603e2e67e3, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 0
     pitch: 1
     loop: 0
     playOnAwake: 0

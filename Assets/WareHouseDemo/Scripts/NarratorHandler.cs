@@ -4,50 +4,83 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using Utilities;
+using Audio.Warehouse;
 
 namespace Ui.Narrator
 {
     public class NarratorHandler : MonoBehaviour
     {
         private static Action _onClickCrossButton , _onCompleteNarrator;
-        [SerializeField] private CanvasGroup _canvasGroup;
-        [SerializeField] private TextMeshProUGUI panelText;
-        [SerializeField] private Image textContainerImage;
+        private CanvasGroup _canvasGroup;
+        [SerializeField] private CanvasGroup _canvasGroupA;
+        [SerializeField] private CanvasGroup _canvasGroupB;
+        private TextMeshProUGUI panelText;
+        [SerializeField] private TextMeshProUGUI panelTextA;
+        [SerializeField] private TextMeshProUGUI panelTextB;
+        private Image textContainerImage;
+        [SerializeField] private Image textContainerImagA;
+        [SerializeField] private Image textContainerImagB;
         [SerializeField] private Color[] randomColor;
         private string _narratorText;
         private float _fadeDuration = 0.4f;
 
         void Start()
         {
-            BringOutNarrator(0f);
+            _canvasGroupA.UpdateState(false, 0);
+            _canvasGroupB.UpdateState(false, 0);
         }
 
-        internal void BringInNarrator(string narratorText, float delay = 1f,
+        internal void BringInNarrator(string narratorText,NarratorName narratorName= NarratorName.NotSet, float delay = 1f, AudioName audioName = AudioName.NotSet,
                Action onCompleteNarrator = null)
         {
+            if(narratorName == NarratorName.A)
+            {
+                _canvasGroup = _canvasGroupA;
+                panelText = panelTextA;
+                textContainerImage = textContainerImagA;
+            }
+            else if (narratorName == NarratorName.B)
+            {
+                _canvasGroup = _canvasGroupB;
+                panelText = panelTextB;
+                textContainerImage = textContainerImagB;
+            }
             _narratorText = narratorText;
             panelText.text = _narratorText;
             int randomInt = UnityEngine.Random.Range(0, randomColor.Length);
             textContainerImage.color = randomColor[randomInt];
             _onCompleteNarrator = onCompleteNarrator;
-            // _canvasGroup.DOFade(1f, delay);
-            _canvasGroup.UpdateState(true, delay , BringOnNarratorComplete);
+            _canvasGroup.UpdateState(true, delay , ()=>BringOnNarratorComplete(audioName));
         }
 
-        private void BringOnNarratorComplete()
+        private void BringOnNarratorComplete(AudioName audioName)
         {
+            GenericAudioManager.Instance.PlaySound(audioName);
             if (_onCompleteNarrator != null)
             {
-                _onCompleteNarrator();
-                _onCompleteNarrator = null;
+                Invoke(nameof(CallOnCompleteNarrator), GenericAudioManager.Instance.GetAudioLength(audioName) + 1);
             }
+        }
+
+        private void CallOnCompleteNarrator()
+        {
+                 BringOutNarrator();            
         }
 
         internal void BringOutNarrator(float delay = 1f)
         {
-            //_canvasGroup.DOFade(0f, delay);
-            _canvasGroup.UpdateState(false, delay);
+            _canvasGroup.UpdateState(false, delay, ()=> {
+                _onCompleteNarrator();
+                //_onCompleteNarrator = null;
+            });
         }
 
     }
+}
+
+public enum NarratorName
+{
+    NotSet = -1,
+    A = 0,
+    B = 1,
 }
