@@ -134,11 +134,21 @@ MonoBehaviour:
     playOnAwake: 0
     rapidSingleShotSound: 0
   - audioName: 12
-    clip: {fileID: 8300000, guid: eda009c8ef3eed7459830f603e2e67e3, type: 3}
+    clip: {fileID: 8300000, guid: 7e2c15e3567a3a34a966e700b19808a5, type: 3}
     soundType: 0
     audioSources:
     - {fileID: 0}
-    volume: 0
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 12
+    clip: {fileID: 8300000, guid: 7e2c15e3567a3a34a966e700b19808a5, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0

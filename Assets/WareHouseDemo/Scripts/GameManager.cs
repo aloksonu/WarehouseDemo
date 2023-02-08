@@ -5,8 +5,8 @@ using Audio.Warehouse;
 
 public class GameManager : MonoBehaviour
 {
-    // P1 A   Answer
-    // P2 B   Question
+    // P1 A   Answer  >>>> man
+    // P2 B   Question  >>> girl
 
     private const string AN01 = "Hi how’re you";
     private const string BN02 = "I’m good, How was you’re weekend";
@@ -36,8 +36,28 @@ public class GameManager : MonoBehaviour
     private const string AN25 = "You mean Inbound logistics, so its basically the way materials and other goods are brought into a company";
     private const string BN26 = "Ok so what are steps are there related with this Inbound logistics";
     private const string AN27 = "Usually This process includes the steps to order, receive, store, transport and manage incoming supplies";
-    private const string BN28 = "Ok pease can you tell me about warehouse receiving";
-    private const string AN29 = "Yes The warehouse receiving process steps include delivery of the products, unloading from the delivery trunk, and inventory storage";
+
+    private const string BN28 = "Oh ok that sounds good";
+    private const string AN29 = "Yeah! So I guess that’s that. Now what are you curios about next";
+    private const string BN30 = "Yes, So can you tell me more about Putaway";
+    private const string AN31 = "So putaway is actually one of the key components in terms of warehouse management";
+    private const string BN32 = "Ok so what does it mean";
+    private const string AN33 = "Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves";
+    private const string BN34 = "So what are the activities involved in this put-away process";
+    private const string AN35 = "the main activities involved in this are warehouse receiving, transportation, and ensuring that inventory is stored in the right locations";
+
+    private const string BN36 = "Alright. That sounds really important. Now can you tell me a bit about outbound logistics";
+    private const string AN37 = "Yeah So this term is generally used for storing, transporting and distributing goods to customer";
+    private const string BN38 = "Ok";
+    private const string AN39 = "So it basically starts with customer sales order, moves on to warehouse packing and ends with product deliver";
+    private const string BN40 = "Cool!";
+
+
+    //private const string AN41 = "Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves";
+    //private const string BN41 = "So what are the activities involved in this put-away process";
+    //private const string AN43 = "the main activities involved in this are warehouse receiving, transportation, and ensuring that inventory is stored in the right locations";
+    //private const string BN28 = "Ok pease can you tell me about warehouse receiving";
+    //private const string AN29 = "Yes The warehouse receiving process steps include delivery of the products, unloading from the delivery trunk, and inventory storage";
 
     private const string NC15 = "Inbound:";
     private const string NC16 = "Receiving";
@@ -75,8 +95,8 @@ public class GameManager : MonoBehaviour
     {
         characterBoy.GetComponent<Transform>().DOMoveX(-5.38f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(5.38f, 2f);
-        Invoke(nameof(CallA01), 2.2f);
-       // Invoke(nameof(CallB28), 2.2f);
+       // Invoke(nameof(CallA01), 2.2f);
+        Invoke(nameof(CallA13), 2.2f);
     }
 
     private void CallA01()
