@@ -1796,7 +1796,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whareHouseSPR: {fileID: 21300000, guid: 05aca2a8161a66f47851297d3c092313, type: 3}
-  whareHouseReceivingSPR: {fileID: 21300000, guid: 850b162c0d4670e47a263ee58b2c7274, type: 3}
+  ReceivingSPR: {fileID: 21300000, guid: 850b162c0d4670e47a263ee58b2c7274, type: 3}
+  InboundSPR: {fileID: 21300000, guid: 0616d08f0a461164c933365923a7c028, type: 3}
+  OutboundSPR: {fileID: 21300000, guid: b966cfa983afa7c4fa3bab75c87d22ad, type: 3}
+  PutawaySPR: {fileID: 21300000, guid: 7d34a48455780ce4f9815443f7b4eea8, type: 3}
+  PickingSPR: {fileID: 21300000, guid: f154930c3c19c434fac4181c24b0f593, type: 3}
+  TransportSPR: {fileID: 21300000, guid: 5d821ed8633b71c4faa9530a4c48975b, type: 3}
   characterBoy: {fileID: 220093441}
   characterGirl: {fileID: 1623340772}
   _narratorHandeler: {fileID: 1720982638}
