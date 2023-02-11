@@ -28,10 +28,34 @@ public class GameManager : MonoBehaviour
     private const string AN17 = "Yeah, So whatever you want just ask right away";
     private const string BN18 = "Yeah Sure!, Let me just get my notes I’ve somethings I need answers for. I’ll ask you about them one by one is that okay";
     private const string AN19 = "Yeah no worries";
-    private const string BN20 = "So, Let’s start with the basics what’s a warehouse";
+
+    private const string BN20 = "So, Let’s start with the basics what’s a warehouse? What’re they’re types? Can you explain them to me?"; //Audio
+
 
     // defination for warehouse
-    private const string AN21 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops";// after this show pic>>warehouse
+
+    private const string AN211 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops." +
+        "Warehouses usually have loading docks to load and unload goods from trucks. Sometimes warehouses are designed for the loading and " +
+        "unloading of goods directly from railways, airports, or seaports";
+
+    private const string AN212 = "In the warehouses, the Stored goods can include any raw materials, packing materials, spare parts, components," +
+        "or finished goods associated with agriculture, manufacturing, and production.As for warehouse types there are many types of warehouses. Like public warehouses.";
+
+    private const string AN213 = "Public warehouse operators lease out their storage space to other companies in exchange for a fee These are a bit cheaper" +
+        " so they’re good for start-ups and other small scale operators. Then there are private warehouses, also called a proprietary warehouse," +
+        " private warehouses are owned by the same companies that produce the goods they store.";
+
+    private const string AN214 = "We also got semi-automated warehouses, they take advantage of both human labour along with technology." +
+        "Then we have smart warehouses, they rely on heavy use of automated technology machines. Some of these technologies include Automated " +
+        "storage and retrieval systems, Automated guided vehicles, Collaborative robots etc. etc.";
+
+    private const string AN215 = "Then there are Distribution Centres, So normally where Warehouses store the goods for longer period," +
+        "Distribution centres are used for storing them Temporarily while they’re being prepped for their next destination or delivery.";
+
+    private const string AN216 = "Then there are Climate-Controlled warehouses, goods that are stored in these types of warehouses require specific" +
+        " temperature or moisture range.   Here the items stored are some agriculture related goods, grains, chemicals etc. ";
+
+   // private const string AN21 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops";// after this show pic>>warehouse
     private const string BN22 = "Ok, Now I do have some terminologies that I didn’t understand here, can you explain them to me";
     private const string AN23 = "Yeah";
     private const string BN24 = "So there’s something written over here like Inbound, Whats that";
@@ -236,14 +260,34 @@ public class GameManager : MonoBehaviour
     }
     private void CallB20()
     {
-        _narratorHandeler.BringInNarrator(BN20, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB20, CallA21);
+        _narratorHandeler.BringInNarrator(BN20, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB20, CallA211);
     }
 
-    private void CallA21()
+    private void CallA211()
     {
-        _narratorHandeler.BringInNarrator(AN21, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA21, CallImageForWharehouse);
+        _narratorHandeler.BringInNarrator(AN211, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA211, CallA212);
     }
 
+    private void CallA212()
+    {
+        _narratorHandeler.BringInNarrator(AN212, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA212, CallA213);
+    }
+    private void CallA213()
+    {
+        _narratorHandeler.BringInNarrator(AN213, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA213, CallA214);
+    }
+    private void CallA214()
+    {
+        _narratorHandeler.BringInNarrator(AN214, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA214, CallA215);
+    }
+    private void CallA215()
+    {
+        _narratorHandeler.BringInNarrator(AN215, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA215, CallA216);
+    }
+    private void CallA216()
+    {
+        _narratorHandeler.BringInNarrator(AN216, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallImageForWharehouse);
+    }
     private void CallImageForWharehouse()
     {
         ImageHandeler.Instance.BringPanel(whareHouseSPR, CallB22);
