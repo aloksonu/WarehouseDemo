@@ -23,6 +23,8 @@ namespace Ui.Narrator
         [SerializeField] private Color[] randomColor;
         private string _narratorText;
         private float _fadeDuration = 0.4f;
+        private const float narratorOutDelay = 0.2f;
+        private const float audioFinishDelay = 0.5f;
 
         void Start()
         {
@@ -58,13 +60,13 @@ namespace Ui.Narrator
             GenericAudioManager.Instance.PlaySound(audioName);
             if (_onCompleteNarrator != null)
             {
-                Invoke(nameof(CallOnCompleteNarrator), GenericAudioManager.Instance.GetAudioLength(audioName) + 1);
+                Invoke(nameof(CallOnCompleteNarrator), GenericAudioManager.Instance.GetAudioLength(audioName) + audioFinishDelay);
             }
         }
 
         private void CallOnCompleteNarrator()
         {
-                 BringOutNarrator();            
+                 BringOutNarrator(narratorOutDelay);            
         }
 
         internal void BringOutNarrator(float delay = 1f)

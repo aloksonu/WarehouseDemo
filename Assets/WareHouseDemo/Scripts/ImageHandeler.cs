@@ -8,7 +8,7 @@ public class ImageHandeler : MonoSingleton<ImageHandeler>
     private static Action _onComplete;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private Image img;
-
+    private const float imageInOutDelay = 0.2f;
 
     void Start()
     {
@@ -25,13 +25,13 @@ public class ImageHandeler : MonoSingleton<ImageHandeler>
     {
         img.sprite = spr;
         _onComplete = onComplete;
-        canvasGroup.UpdateState(true);
-        Invoke(nameof(BringOutPanel), 4);
+        canvasGroup.UpdateState(true, imageInOutDelay);
+        Invoke(nameof(BringOutPanel), 5);
     }
 
     internal void BringOutPanel()
     {
-        canvasGroup.UpdateState(false,0.2f,()=> {
+        canvasGroup.UpdateState(false, imageInOutDelay, ()=> {
             
             if(_onComplete != null) { 
             _onComplete();
