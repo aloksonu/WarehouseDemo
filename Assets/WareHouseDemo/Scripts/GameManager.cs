@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
         " where they're stored along with sending them to desired delivery locations";
 
 
+    private const string NGameComplete = "Thank You For This Lovely Information";
     //private const string AN41 = "Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves";
     //private const string BN41 = "So what are the activities involved in this put-away process";
     //private const string AN43 = "the main activities involved in this are warehouse receiving, transportation, and ensuring that inventory is stored in the right locations";
@@ -153,10 +154,10 @@ public class GameManager : MonoBehaviour
 
     private void BringCharacterInView()
     {
-        characterBoy.GetComponent<Transform>().DOMoveX(-5.38f, 2f);
-        characterGirl.GetComponent<Transform>().DOMoveX(5.38f, 2f);
-       // Invoke(nameof(CallA01), 2.2f);
-        Invoke(nameof(CallB20), 2.2f);
+        characterBoy.GetComponent<Transform>().DOMoveX(-4.25f, 2f);
+        characterGirl.GetComponent<Transform>().DOMoveX(4.25f, 2f);
+        Invoke(nameof(CallA01), 2.2f);
+       // Invoke(nameof(CallB52), 2.2f);
     }
 
     private void CallA01()
@@ -466,11 +467,11 @@ public class GameManager : MonoBehaviour
     }
     private void CallB54()
     {
-        _narratorHandeler.BringInNarrator(BN38, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB38, null);
+        _narratorHandeler.BringInNarrator(BN38, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB38, BringWarehouseCompletePanel);
     }
     private void BringWarehouseCompletePanel()
     {
-        WarehouseTrainingCompletePanel.Instance.BringPanel();
+        WarehouseTutorailComplete.Instance.BringPanel(NGameComplete,null,AudioName.NGameComplete);
     }
 
 }

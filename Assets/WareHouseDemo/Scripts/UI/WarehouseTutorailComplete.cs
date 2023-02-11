@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
+using Audio.Warehouse;
+using System;
+using TMPro;
 using UnityEngine;
+using Utilities;
 
-public class WarehouseTutorailComplete : MonoBehaviour
+public class WarehouseTutorailComplete : MonoSingleton<WarehouseTutorailComplete>
 {
-    // Start is called before the first frame update
+    private static Action _onComplete;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private TextMeshProUGUI gameCompleteTMP;
+    private float _fadeDuration = 0.2f;
+
     void Start()
     {
-        
+        canvasGroup.UpdateState(false, 0);
+    }
+    internal void BringPanel(string gameCompleteText = null ,Action onComplete=null, AudioName audioName = AudioName.NotSet)
+    {
+        _onComplete = onComplete;
+        gameCompleteTMP.text = gameCompleteText.ToString();
+        canvasGroup.UpdateState(true, _fadeDuration,()=> {
+            if(audioName!= AudioName.NotSet)
+            GenericAudioManager.Instance.PlaySound(audioName);
+        });
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

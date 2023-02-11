@@ -593,3 +593,13 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     rapidSingleShotSound: 0
+  - audioName: 53
+    clip: {fileID: 8300000, guid: 7b379282a985cea40a058abdd41dbb6a, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0

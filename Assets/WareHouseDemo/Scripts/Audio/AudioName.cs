@@ -66,5 +66,7 @@
         NA51 = 50,
         NB52 = 51,
         NA53 = 52,
+
+        NGameComplete = 53,
     }
 }
