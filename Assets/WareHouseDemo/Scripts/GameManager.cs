@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour
 
     // defination for warehouse
 
-    private const string AN211 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops." +
-        "Warehouses usually have loading docks to load and unload goods from trucks. Sometimes warehouses are designed for the loading and " +
-        "unloading of goods directly from railways, airports, or seaports";
+    private const string AN211 = "Sure, warehouse is an inventory storage cum management facility where inbound goods are received , tracked & temporarily stored" +
+        " for future demands while handling the outbound shipments based on current market demands and replenishment orders.Warehouses usually have loading docks" +
+        " to load and unload goods from desired mode of transport.";
 
     private const string AN212 = "In the warehouses, the Stored goods can include any raw materials, packing materials, spare parts, components," +
         "or finished goods associated with agriculture, manufacturing, and production.As for warehouse types there are many types of warehouses. Like public warehouses.";
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
         characterBoy.GetComponent<Transform>().DOMoveX(-4.25f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(4.25f, 2f);
         Invoke(nameof(CallA01), 2.2f);
-       // Invoke(nameof(CallB52), 2.2f);
+      // Invoke(nameof(CallA211), 2.2f);
     }
 
     private void CallA01()
