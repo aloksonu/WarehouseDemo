@@ -273,6 +273,26 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     rapidSingleShotSound: 0
+  - audioName: 217
+    clip: {fileID: 8300000, guid: f242c543e1f19f940816c1a9f1c78d99, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
+  - audioName: 218
+    clip: {fileID: 8300000, guid: f242c543e1f19f940816c1a9f1c78d99, type: 3}
+    soundType: 0
+    audioSources:
+    - {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    rapidSingleShotSound: 0
   - audioName: 21
     clip: {fileID: 8300000, guid: 5d39727956d7a064f929afcce1ef5136, type: 3}
     soundType: 0

@@ -8,55 +8,59 @@ public class GameManager : MonoBehaviour
     // P1 A   Answer  >>>> man
     // P2 B   Question  >>> girl
 
-    private const string AN01 = "Hi, Good Morning How’re you doing?";
+    private const string AN01 = "Hi, how’re you?";
     private const string BN02 = "I’m good, How was you’re weekend?";
-    //private const string AN03 = "Nothing much, what about you";
+    private const string AN03 = "Great! Thanks for asking. Hope you had a great weekend too!";
     //private const string BN04 = "Just went to beach with my family";
     //private const string AN05 = "Nice, So how was it";
     //private const string BN06 = "Very nice & Calming, A much needed gate away. Enjoyed the sunsets, the food & some quality time";
     //private const string AN07 = "Sounds really awesome";
     //private const string BN08 = "Yes It was";
-    private const string AN09 = "It was good, So, what are you working on nowadays?";
+    private const string AN09 = "So, what are you working on nowadays?";
     private const string BN10 = "Oh! It’s just a new project that was assigned to me but I’ve no idea about it, So I’m hoping to find someone" +
                                 " who knows about the field my client is into";
-    private const string AN11 = "Ok & what’s that";
-    private const string BN12 = "He’s into warehouse automation";
+    private const string AN11 = "Ok & what’s that?";
+    private const string BN12 = "They are into Warehouse Automation";
     private const string AN13 = "Is that so? Don’t worry then, I’ll help you out";
 
-    //private const string BN14 = "You serious? You’ve idea about this field? If you help me out it’d be really helpful";
-    //private const string AN15 = "Yes, I mean I’ve been working in the similar field for over a decade now";
+    private const string BN14 = "You serious? You’ve idea about this field? It’d be really helpful if you can guide me.";
+    private const string AN15 = "Yes I can. I’ve been working in the similar field for over a decade now. So ask me and I will try my best to explain.";
     //private const string BN16 = "You really are a lifesaver";
     //private const string AN17 = "Yeah, So whatever you want just ask right away";
-    //private const string BN18 = "Yeah Sure!, Let me just get my notes I’ve somethings I need answers for. I’ll ask you about them one by one is that okay";
-    //private const string AN19 = "Yeah no worries";
+    private const string BN18 = "Thanks again for the offer. Let me just get my notepad as I’ve somethings I need answers for." +
+        " If it works for you I can ask them one by one.";
+    private const string AN19 = "Yeah no worries";
 
     private const string BN20 = "So, Let’s start with the basics what’s a warehouse? What’re they’re types? Can you explain them to me?"; //Audio
 
 
     // defination for warehouse
 
-    private const string AN211 = "Sure, warehouse is an inventory storage cum management facility where inbound goods are received , tracked & temporarily stored" +
-        " for future demands while handling the outbound shipments based on current market demands and replenishment orders.Warehouses usually have loading docks" +
-        " to load and unload goods from desired mode of transport.";
+    private const string AN211 = "Sure, warehouse is an inventory storage cum management facility, where inbound goods are received , tracked &" +
+        " temporarily stored or future demands. Warehouse also manage the outbound shipments based on current market demands and replenishment orders." +
+        " Warehouses usually have loading docks to load and unload goods from desired mode of transport.";
 
-    private const string AN212 = "In the warehouses, the Stored goods can include any raw materials, packing materials, spare parts, components," +
-        "or finished goods associated with agriculture, manufacturing, and production.As for warehouse types there are many types of warehouses. Like public warehouses.";
+    private const string AN212 = "In the warehouses, the Stored goods can include any raw materials, packing materials, spare parts, components, or finished goods" +
+        " associated with agriculture, manufacturing, and production. As for warehouse types there are many types of warehouses. Let me explain.";
 
-    private const string AN213 = "Public warehouse operators lease out their storage space to other companies in exchange for a fee These are a bit cheaper" +
-        " so they’re good for start-ups and other small scale operators. Then there are private warehouses, also called a proprietary warehouse," +
-        " private warehouses are owned by the same companies that produce the goods they store.";
+    private const string AN213 = "Public warehouse operators lease out their storage space to other companies in exchange for a fee." +
+        " These are a bit cheaper and hence good for start-ups and other small scale operators.";
 
-    private const string AN214 = "We also got semi-automated warehouses, they take advantage of both human labour along with technology." +
-        "Then we have smart warehouses, they rely on heavy use of automated technology machines. Some of these technologies include Automated " +
-        "storage and retrieval systems, Automated guided vehicles, Collaborative robots etc. etc.";
+    private const string AN214 = "Another type is Private warehouse, also called a proprietary warehouse. Private warehouses are owned by" +
+        " the same companies that produce the goods they store";
 
-    private const string AN215 = "Then there are Distribution Centres, So normally where Warehouses store the goods for longer period," +
-        "Distribution centres are used for storing them Temporarily while they’re being prepped for their next destination or delivery.";
+    private const string AN215 = "Another kind is semi-automated warehouses that take advantage of both human labour, along with technology.";
 
-    private const string AN216 = "Then there are Climate-Controlled warehouses, goods that are stored in these types of warehouses require specific" +
-        " temperature or moisture range.   Here the items stored are some agriculture related goods, grains, chemicals etc. ";
+    private const string AN216 = "Then we have smart warehouses. They rely on heavy use of automated technology machines. Some of these technologies include" +
+        " Automated Storage and Retrieval systems, Automated Guided Vehicles, Collaborative Robots etc. etc.";
 
-   // private const string AN21 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops";// after this show pic>>warehouse
+    private const string AN217 = "Also there are Distribution Centres where Warehouses store the goods for longer period. Distribution centres are" +
+        " used for storing them temporarily while they’re being prepped for their next destination or delivery.";
+
+    private const string AN218 = "There is also Climate-Controlled warehouses. Goods that are stored in these types of warehouses require specific" +
+        " temperature or moisture range. Here the items stored are some agriculture related goods, grains, chemicals etc.";
+
+    // private const string AN21 = "Yes, Sure, warehouse is a building where large quantities of goods are stored before being sent to shops";// after this show pic>>warehouse
     private const string BN22 = "Ok, Now I do have some terminologies that I didn’t understand here, can you explain them to me";
     private const string AN23 = "Yeah";
     private const string BN24 = "So there’s something written over here like Inbound, Whats that";
@@ -66,7 +70,7 @@ public class GameManager : MonoBehaviour
 
 
     //>>Receiving
-    private const string BN41 = "Ok pease can you tell me about warehouse receiving";
+    private const string BN41 = "Ok please can you tell me about warehouse receiving";
     private const string AN42 = "Ok look this picture"; // after this show pic >> receiving
     private const string AN43 = "So the warehouse receiving process steps include delivery of the products, unloading from the delivery trunk, and inventory storage";
 
@@ -74,11 +78,13 @@ public class GameManager : MonoBehaviour
     private const string BN28 = "Oh ok that sounds good";
     private const string AN29 = "Yeah! So I guess that’s that. Now what are you curios about next";
     private const string BN30 = "Yes, So can you tell me more about Putaway";
-    private const string AN31 = "So putaway is actually one of the key components in terms of warehouse management";
-    private const string BN32 = "Ok so what does it mean";
-    private const string AN33 = "Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves";
+    private const string AN31 = "So put-away is actually one of the key components in terms of warehouse management." +
+        " Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves.";
+   // private const string BN32 = "Ok so what does it mean";
+  //  private const string AN33 = "Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves";
     private const string BN34 = "So what are the activities involved in this put-away process";
-    private const string AN35 = "the main activities involved in this are warehouse receiving, transportation, and ensuring that inventory is stored in the right locations";
+    private const string AN35 = "the main activities involved in this are warehouse receiving, transportation, and ensuring that inventory is stored" +
+        " in the right locations";
     // here show pic >>Putaway
 
     //>>Storage
@@ -94,7 +100,8 @@ public class GameManager : MonoBehaviour
 
     //..........
     private const string BN44 = "Ok, Now can you tell me more about this picking process";
-    private const string AN45 = "Yeah! So what happens is Voice, labels, or lights direct operators to pick all cases required for a batch of orders within a specific pick module.Operators make the picks";
+    private const string AN45 = "Yeah! So what happens is Voice, labels, or lights direct operators to pick all cases required for a batch of orders " +
+        "within a specific pick module.Operators make the picks";
     private const string BN46 = "Ok then";
     private const string AN47 = "After that, All the picks are placed on each case on the outbound conveyor.The conveyor transports and merges cases from" +
         " various pick modules and then sorts them to individual shipping lanes based on order requirements";
@@ -110,26 +117,6 @@ public class GameManager : MonoBehaviour
 
 
     private const string NGameComplete = "Thank You For This Information";
-    //private const string AN41 = "Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves";
-    //private const string BN41 = "So what are the activities involved in this put-away process";
-    //private const string AN43 = "the main activities involved in this are warehouse receiving, transportation, and ensuring that inventory is stored in the right locations";
-
-
-    //private const string NC15 = "Inbound:";
-    //private const string NC16 = "Receiving";
-    //private const string NC17 = "Putaway";
-    //private const string NC18 = "Storage";
-    //private const string NC19 = "Outbound:";
-    //private const string NC20 = "Picking";
-    //private const string NC21 = "Transport";
-    //private const string NC22 = "Shipping Software";
-    //private const string NC23 = "Service";
-
-    //private const string NC24 = "<b> Receiving</b>  the collection of activities involved in:";
-    //private const string NC25 = "\u2022<indent=1em> the orderly receipt of all materials coming into the warehouse.</indent>";
-    //private const string NC26 = "\u2022<indent=1em> providing the assurance that the quantity and quality of such materials are as ordered.</indent>";
-    //private const string NC27 = "\u2022<indent=1em> disbursing materials to storage or to other organizational functions requiring them.</indent>";
-
 
     [SerializeField] Sprite whareHouseSPR;
     [SerializeField] Sprite ReceivingSPR;
@@ -157,7 +144,7 @@ public class GameManager : MonoBehaviour
     {
         characterBoy.GetComponent<Transform>().DOMoveX(-4.25f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(4.25f, 2f);
-        Invoke(nameof(CallA01), 2.2f);
+        Invoke(nameof(CallImageForPutAway), 2.2f);
        //Invoke(nameof(CallA53), 2.2f);
     }
 
@@ -169,14 +156,14 @@ public class GameManager : MonoBehaviour
 
     private void CallB02()
     {
-        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB02, CallA09);
+        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB02, CallA03);
     }
 
 
-    //private void CallA03()
-    //{
-    //    _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA03, CallB04);
-    //}
+    private void CallA03()
+    {
+        _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA03, CallA09);
+    }
     //private void CallB04()
     //{
     //    _narratorHandeler.BringInNarrator(BN04, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB04, CallA05);
@@ -226,20 +213,20 @@ public class GameManager : MonoBehaviour
 
     private void CallA13()
     {
-        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA13, CallB20);
+        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA13, CallB14);
     }
 
 
-    //private void CallB14()
-    //{
-    //    _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB14, CallA15);
-    //}
+    private void CallB14()
+    {
+        _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB14, CallA15);
+    }
 
 
-    //private void CallA15()
-    //{
-    //    _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA15, CallB16);
-    //}
+    private void CallA15()
+    {
+        _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA15, CallB18);
+    }
     //private void CallB16()
     //{
     //    _narratorHandeler.BringInNarrator(BN16, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB16, CallA17);
@@ -250,16 +237,16 @@ public class GameManager : MonoBehaviour
     //}
 
 
-    //private void CallB18()
-    //{
-    //    _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB18, CallA19);
-    //}
+    private void CallB18()
+    {
+        _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB18, CallA19);
+    }
 
 
-    //private void CallA19()
-    //{
-    //    _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA19, CallB20);
-    //}
+    private void CallA19()
+    {
+        _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA19, CallB20);
+    }
     private void CallB20()
     {
         _narratorHandeler.BringInNarrator(BN20, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB20, CallA211);
@@ -288,7 +275,15 @@ public class GameManager : MonoBehaviour
     }
     private void CallA216()
     {
-        _narratorHandeler.BringInNarrator(AN216, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallImageForWharehouse);
+        _narratorHandeler.BringInNarrator(AN216, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallA217);
+    }
+    private void CallA217()
+    {
+        _narratorHandeler.BringInNarrator(AN217, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallA218);
+    }
+    private void CallA218()
+    {
+        _narratorHandeler.BringInNarrator(AN218, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallImageForWharehouse);
     }
     private void CallImageForWharehouse()
     {
@@ -362,17 +357,17 @@ public class GameManager : MonoBehaviour
 
     private void CallA31()
     {
-        _narratorHandeler.BringInNarrator(AN31, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA31, CallB32);
+        _narratorHandeler.BringInNarrator(AN31, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA31, CallB34);
     }
-    private void CallB32()
-    {
-        _narratorHandeler.BringInNarrator(BN32, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB32, CallA33);
-    }
+    //private void CallB32()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN32, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB32, CallA33);
+    //}
 
-    private void CallA33()
-    {
-        _narratorHandeler.BringInNarrator(AN33, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA33, CallB34);
-    }
+    //private void CallA33()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN33, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA33, CallB34);
+    //}
     private void CallB34()
     {
         _narratorHandeler.BringInNarrator(BN34, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB34, CallA35);
@@ -384,7 +379,15 @@ public class GameManager : MonoBehaviour
     }
     private void CallImageForPutAway()
     {
-        ImageHandeler.Instance.BringPanel(PutawaySPR, CallB36);
+        ImageHandeler.Instance.BringPanel(PutawaySPR, CallBStorage1);
+    }
+    private void CallBStorage1()
+    {
+        _narratorHandeler.BringInNarrator(BStorage1, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB34, CallAStorage2);
+    }
+    private void CallAStorage2()
+    {
+        _narratorHandeler.BringInNarrator(AStorage2, NarratorName.A, delayBetweenTwoNarrator, AudioName.NB34, CallB36);
     }
     private void CallB36()
     {
