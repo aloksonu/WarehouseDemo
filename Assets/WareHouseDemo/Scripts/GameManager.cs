@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
     //private const string AN07 = "Sounds really awesome";
     //private const string BN08 = "Yes It was";
     private const string AN09 = "So, what are you working on nowadays?";
-    private const string BN10 = "Oh! It’s just a new project that was assigned to me but I’ve no idea about it, So I’m hoping to find someone" +
-                                " who knows about the field my client is into";
+    private const string BN10 = "Oh! It’s just a new project that was assigned to me, but I’ve no idea about it. " +
+        "I’m hoping to find someone who knows about the field, my client is into.";
     private const string AN11 = "Ok & what’s that?";
     private const string BN12 = "They are into Warehouse Automation";
     private const string AN13 = "Is that so? Don’t worry then, I’ll help you out";
@@ -144,25 +144,25 @@ public class GameManager : MonoBehaviour
     {
         characterBoy.GetComponent<Transform>().DOMoveX(-4.25f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(4.25f, 2f);
-        Invoke(nameof(CallImageForPutAway), 2.2f);
+        Invoke(nameof(CallA01), 2.2f);
        //Invoke(nameof(CallA53), 2.2f);
     }
 
     private void CallA01()
     {
-        _narratorHandeler.BringInNarrator(AN01,NarratorName.A, delayBetweenTwoNarrator, AudioName.NA01, CallB02);
+        _narratorHandeler.BringInNarrator(AN01,NarratorName.A, delayBetweenTwoNarrator, AudioName.AN01, CallB02);
     }
 
 
     private void CallB02()
     {
-        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB02, CallA03);
+        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, AudioName.BN02, CallA03);
     }
 
 
     private void CallA03()
     {
-        _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA03, CallA09);
+        _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN03, CallA09);
     }
     //private void CallB04()
     //{
@@ -192,13 +192,13 @@ public class GameManager : MonoBehaviour
 
     private void CallA09()
     {
-        _narratorHandeler.BringInNarrator(AN09, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA09, CallB10);
+        _narratorHandeler.BringInNarrator(AN09, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN09, CallB10);
     }
 
 
     private void CallB10()
     {
-        _narratorHandeler.BringInNarrator(BN10, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB10, CallA11);
+        _narratorHandeler.BringInNarrator(BN10, NarratorName.B, delayBetweenTwoNarrator, AudioName.BN10, CallA11);
     }
 
 
@@ -279,11 +279,11 @@ public class GameManager : MonoBehaviour
     }
     private void CallA217()
     {
-        _narratorHandeler.BringInNarrator(AN217, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallA218);
+        _narratorHandeler.BringInNarrator(AN217, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN217, CallA218);
     }
     private void CallA218()
     {
-        _narratorHandeler.BringInNarrator(AN218, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallImageForWharehouse);
+        _narratorHandeler.BringInNarrator(AN218, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN218, CallImageForWharehouse);
     }
     private void CallImageForWharehouse()
     {
@@ -383,11 +383,11 @@ public class GameManager : MonoBehaviour
     }
     private void CallBStorage1()
     {
-        _narratorHandeler.BringInNarrator(BStorage1, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB34, CallAStorage2);
+        _narratorHandeler.BringInNarrator(BStorage1, NarratorName.B, delayBetweenTwoNarrator, AudioName.BStorage1, CallAStorage2);
     }
     private void CallAStorage2()
     {
-        _narratorHandeler.BringInNarrator(AStorage2, NarratorName.A, delayBetweenTwoNarrator, AudioName.NB34, CallB36);
+        _narratorHandeler.BringInNarrator(AStorage2, NarratorName.A, delayBetweenTwoNarrator, AudioName.AStorage2, CallB36);
     }
     private void CallB36()
     {
