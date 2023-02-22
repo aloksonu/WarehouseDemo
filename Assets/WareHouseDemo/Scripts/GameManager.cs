@@ -8,26 +8,27 @@ public class GameManager : MonoBehaviour
     // P1 A   Answer  >>>> man
     // P2 B   Question  >>> girl
 
-    private const string AN01 = "Hi how’re you";
-    private const string BN02 = "I’m good, How was you’re weekend";
-    private const string AN03 = "Nothing much, what about you";
-    private const string BN04 = "Just went to beach with my family";
-    private const string AN05 = "Nice, So how was it";
-    private const string BN06 = "Very nice & Calming, A much needed gate away. Enjoyed the sunsets, the food & some quality time";
-    private const string AN07 = "Sounds really awesome";
-    private const string BN08 = "Yes It was";
-    private const string AN09 = "So, what are you working on nowadays";
+    private const string AN01 = "Hi, Good Morning How’re you doing?";
+    private const string BN02 = "I’m good, How was you’re weekend?";
+    //private const string AN03 = "Nothing much, what about you";
+    //private const string BN04 = "Just went to beach with my family";
+    //private const string AN05 = "Nice, So how was it";
+    //private const string BN06 = "Very nice & Calming, A much needed gate away. Enjoyed the sunsets, the food & some quality time";
+    //private const string AN07 = "Sounds really awesome";
+    //private const string BN08 = "Yes It was";
+    private const string AN09 = "It was good, So, what are you working on nowadays?";
     private const string BN10 = "Oh! It’s just a new project that was assigned to me but I’ve no idea about it, So I’m hoping to find someone" +
                                 " who knows about the field my client is into";
     private const string AN11 = "Ok & what’s that";
     private const string BN12 = "He’s into warehouse automation";
     private const string AN13 = "Is that so? Don’t worry then, I’ll help you out";
-    private const string BN14 = "You serious? You’ve idea about this field? If you help me out it’d be really helpful";
-    private const string AN15 = "Yes, I mean I’ve been working in the similar field for over a decade now";
-    private const string BN16 = "You really are a lifesaver";
-    private const string AN17 = "Yeah, So whatever you want just ask right away";
-    private const string BN18 = "Yeah Sure!, Let me just get my notes I’ve somethings I need answers for. I’ll ask you about them one by one is that okay";
-    private const string AN19 = "Yeah no worries";
+
+    //private const string BN14 = "You serious? You’ve idea about this field? If you help me out it’d be really helpful";
+    //private const string AN15 = "Yes, I mean I’ve been working in the similar field for over a decade now";
+    //private const string BN16 = "You really are a lifesaver";
+    //private const string AN17 = "Yeah, So whatever you want just ask right away";
+    //private const string BN18 = "Yeah Sure!, Let me just get my notes I’ve somethings I need answers for. I’ll ask you about them one by one is that okay";
+    //private const string AN19 = "Yeah no worries";
 
     private const string BN20 = "So, Let’s start with the basics what’s a warehouse? What’re they’re types? Can you explain them to me?"; //Audio
 
@@ -108,7 +109,7 @@ public class GameManager : MonoBehaviour
         " where they're stored along with sending them to desired delivery locations";
 
 
-    private const string NGameComplete = "Thank You For This Lovely Information";
+    private const string NGameComplete = "Thank You For This Information";
     //private const string AN41 = "Its basically process of storing goods in a warehouse. Here we take items from inventory and them put them on the different pallet or shelves";
     //private const string BN41 = "So what are the activities involved in this put-away process";
     //private const string AN43 = "the main activities involved in this are warehouse receiving, transportation, and ensuring that inventory is stored in the right locations";
@@ -157,7 +158,7 @@ public class GameManager : MonoBehaviour
         characterBoy.GetComponent<Transform>().DOMoveX(-4.25f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(4.25f, 2f);
         Invoke(nameof(CallA01), 2.2f);
-      // Invoke(nameof(CallA211), 2.2f);
+       //Invoke(nameof(CallA53), 2.2f);
     }
 
     private void CallA01()
@@ -168,39 +169,39 @@ public class GameManager : MonoBehaviour
 
     private void CallB02()
     {
-        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB02, CallA03);
+        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB02, CallA09);
     }
 
 
-    private void CallA03()
-    {
-        _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA03, CallB04);
-    }
-    private void CallB04()
-    {
-        _narratorHandeler.BringInNarrator(BN04, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB04, CallA05);
-    }
+    //private void CallA03()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA03, CallB04);
+    //}
+    //private void CallB04()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN04, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB04, CallA05);
+    //}
 
-    private void CallA05()
-    {
-        _narratorHandeler.BringInNarrator(AN05, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA05, CallB06);
-    }
-
-
-    private void CallB06()
-    {
-        _narratorHandeler.BringInNarrator(BN06, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB06, CallA07);
-    }
+    //private void CallA05()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN05, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA05, CallB06);
+    //}
 
 
-    private void CallA07()
-    {
-        _narratorHandeler.BringInNarrator(AN07, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA07, CallB08);
-    }
-    private void CallB08()
-    {
-        _narratorHandeler.BringInNarrator(BN08, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB08, CallA09);
-    }
+    //private void CallB06()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN06, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB06, CallA07);
+    //}
+
+
+    //private void CallA07()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN07, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA07, CallB08);
+    //}
+    //private void CallB08()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN08, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB08, CallA09);
+    //}
 
     private void CallA09()
     {
@@ -225,40 +226,40 @@ public class GameManager : MonoBehaviour
 
     private void CallA13()
     {
-        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA13, CallB14);
+        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA13, CallB20);
     }
 
 
-    private void CallB14()
-    {
-        _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB14, CallA15);
-    }
+    //private void CallB14()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB14, CallA15);
+    //}
 
 
-    private void CallA15()
-    {
-        _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA15, CallB16);
-    }
-    private void CallB16()
-    {
-        _narratorHandeler.BringInNarrator(BN16, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB16, CallA17);
-    }
-    private void CallA17()
-    {
-        _narratorHandeler.BringInNarrator(AN17, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA17, CallB18);
-    }
+    //private void CallA15()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA15, CallB16);
+    //}
+    //private void CallB16()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN16, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB16, CallA17);
+    //}
+    //private void CallA17()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN17, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA17, CallB18);
+    //}
 
 
-    private void CallB18()
-    {
-        _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB18, CallA19);
-    }
+    //private void CallB18()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB18, CallA19);
+    //}
 
 
-    private void CallA19()
-    {
-        _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA19, CallB20);
-    }
+    //private void CallA19()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA19, CallB20);
+    //}
     private void CallB20()
     {
         _narratorHandeler.BringInNarrator(BN20, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB20, CallA211);
