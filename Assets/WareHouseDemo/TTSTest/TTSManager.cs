@@ -18,14 +18,15 @@ public class TTSManager : MonoSingleton<TTSManager>
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !speakerMale.audioSource.isPlaying)
-        {
+        //if (Input.GetKeyDown(KeyCode.Space) && !speakerMale.audioSource.isPlaying)
+        //{
 
-            ReadCanvas("Hi this is alok");
-        }
+        //    ReadCanvas("Hi this is alok");
+        //}
     }
     public void ReadCanvas(string str, NarratorName narratorName = NarratorName.NotSet, Action onComplete= null)
     {
+        StopAllCoroutines();
         StartCoroutine(CanvasReaderCoroutine(str, narratorName, onComplete));
     }
 
