@@ -150,19 +150,19 @@ public class GameManager : MonoBehaviour
 
     private void CallA01()
     {
-        _narratorHandeler.BringInNarrator(AN01,NarratorName.A, delayBetweenTwoNarrator, AudioName.AN01, CallB02);
+        _narratorHandeler.BringInNarrator(AN01,NarratorName.A, delayBetweenTwoNarrator, CallB02);
     }
 
 
     private void CallB02()
     {
-        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, AudioName.BN02, CallA03);
+        _narratorHandeler.BringInNarrator(BN02, NarratorName.B, delayBetweenTwoNarrator, CallA03);
     }
 
 
     private void CallA03()
     {
-        _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN03, CallA09);
+        _narratorHandeler.BringInNarrator(AN03, NarratorName.A, delayBetweenTwoNarrator, CallA09);
     }
     //private void CallB04()
     //{
@@ -192,40 +192,40 @@ public class GameManager : MonoBehaviour
 
     private void CallA09()
     {
-        _narratorHandeler.BringInNarrator(AN09, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN09, CallB10);
+        _narratorHandeler.BringInNarrator(AN09, NarratorName.A, delayBetweenTwoNarrator, CallB10);
     }
 
 
     private void CallB10()
     {
-        _narratorHandeler.BringInNarrator(BN10, NarratorName.B, delayBetweenTwoNarrator, AudioName.BN10, CallA11);
+        _narratorHandeler.BringInNarrator(BN10, NarratorName.B, delayBetweenTwoNarrator, CallA11);
     }
 
 
     private void CallA11()
     {
-        _narratorHandeler.BringInNarrator(AN11, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA11, CallB12);
+        _narratorHandeler.BringInNarrator(AN11, NarratorName.A, delayBetweenTwoNarrator, CallB12);
     }
     private void CallB12()
     {
-        _narratorHandeler.BringInNarrator(BN12, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB12, CallA13);
+        _narratorHandeler.BringInNarrator(BN12, NarratorName.B, delayBetweenTwoNarrator, CallA13);
     }
 
     private void CallA13()
     {
-        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA13, CallB14);
+        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, CallB14);
     }
 
 
     private void CallB14()
     {
-        _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB14, CallA15);
+        _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, CallA15);
     }
 
 
     private void CallA15()
     {
-        _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA15, CallB18);
+        _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, CallB18);
     }
     //private void CallB16()
     //{
@@ -239,51 +239,51 @@ public class GameManager : MonoBehaviour
 
     private void CallB18()
     {
-        _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB18, CallA19);
+        _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, CallA19);
     }
 
 
     private void CallA19()
     {
-        _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA19, CallB20);
+        _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, CallB20);
     }
     private void CallB20()
     {
-        _narratorHandeler.BringInNarrator(BN20, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB20, CallA211);
+        _narratorHandeler.BringInNarrator(BN20, NarratorName.B, delayBetweenTwoNarrator, CallA211);
     }
 
     private void CallA211()
     {
-        _narratorHandeler.BringInNarrator(AN211, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA211, CallA212);
+        _narratorHandeler.BringInNarrator(AN211, NarratorName.A, delayBetweenTwoNarrator, CallA212);
     }
 
     private void CallA212()
     {
-        _narratorHandeler.BringInNarrator(AN212, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA212, CallA213);
+        _narratorHandeler.BringInNarrator(AN212, NarratorName.A, delayBetweenTwoNarrator, CallA213);
     }
     private void CallA213()
     {
-        _narratorHandeler.BringInNarrator(AN213, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA213, CallA214);
+        _narratorHandeler.BringInNarrator(AN213, NarratorName.A, delayBetweenTwoNarrator,  CallA214);
     }
     private void CallA214()
     {
-        _narratorHandeler.BringInNarrator(AN214, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA214, CallA215);
+        _narratorHandeler.BringInNarrator(AN214, NarratorName.A, delayBetweenTwoNarrator, CallA215);
     }
     private void CallA215()
     {
-        _narratorHandeler.BringInNarrator(AN215, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA215, CallA216);
+        _narratorHandeler.BringInNarrator(AN215, NarratorName.A, delayBetweenTwoNarrator, CallA216);
     }
     private void CallA216()
     {
-        _narratorHandeler.BringInNarrator(AN216, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA216, CallA217);
+        _narratorHandeler.BringInNarrator(AN216, NarratorName.A, delayBetweenTwoNarrator, CallA217);
     }
     private void CallA217()
     {
-        _narratorHandeler.BringInNarrator(AN217, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN217, CallA218);
+        _narratorHandeler.BringInNarrator(AN217, NarratorName.A, delayBetweenTwoNarrator, CallA218);
     }
     private void CallA218()
     {
-        _narratorHandeler.BringInNarrator(AN218, NarratorName.A, delayBetweenTwoNarrator, AudioName.AN218, CallImageForWharehouse);
+        _narratorHandeler.BringInNarrator(AN218, NarratorName.A, delayBetweenTwoNarrator, CallImageForWharehouse);
     }
     private void CallImageForWharehouse()
     {
@@ -292,22 +292,22 @@ public class GameManager : MonoBehaviour
 
     private void CallB22()
     {
-        _narratorHandeler.BringInNarrator(BN22, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB22, CallA23);
+        _narratorHandeler.BringInNarrator(BN22, NarratorName.B, delayBetweenTwoNarrator, CallA23);
     }
 
 
     private void CallA23()
     {
-        _narratorHandeler.BringInNarrator(AN23, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA23, CallB24);
+        _narratorHandeler.BringInNarrator(AN23, NarratorName.A, delayBetweenTwoNarrator, CallB24);
     }
     private void CallB24()
     {
-        _narratorHandeler.BringInNarrator(BN24, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB24, CallA25);
+        _narratorHandeler.BringInNarrator(BN24, NarratorName.B, delayBetweenTwoNarrator, CallA25);
     }
 
     private void CallA25()
     {
-        _narratorHandeler.BringInNarrator(AN25, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA25, CallImageForInbound);
+        _narratorHandeler.BringInNarrator(AN25, NarratorName.A, delayBetweenTwoNarrator, CallImageForInbound);
     }
 
     private void CallImageForInbound()
@@ -316,21 +316,21 @@ public class GameManager : MonoBehaviour
     }
     private void CallB26()
     {
-        _narratorHandeler.BringInNarrator(BN26, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB26, CallA27);
+        _narratorHandeler.BringInNarrator(BN26, NarratorName.B, delayBetweenTwoNarrator, CallA27);
     }
 
     private void CallA27()
     {
-        _narratorHandeler.BringInNarrator(AN27, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA27, CallB41);
+        _narratorHandeler.BringInNarrator(AN27, NarratorName.A, delayBetweenTwoNarrator, CallB41);
     }
 
     private void CallB41()
     {
-        _narratorHandeler.BringInNarrator(BN41, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB41, CallA42);
+        _narratorHandeler.BringInNarrator(BN41, NarratorName.B, delayBetweenTwoNarrator, CallA42);
     }
     private void CallA42()
     {
-        _narratorHandeler.BringInNarrator(AN42, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA42, CallImageForWharehouseReceving);
+        _narratorHandeler.BringInNarrator(AN42, NarratorName.A, delayBetweenTwoNarrator, CallImageForWharehouseReceving);
     }
     private void CallImageForWharehouseReceving()
     {
@@ -338,26 +338,26 @@ public class GameManager : MonoBehaviour
     }
     private void CallA43()
     {
-        _narratorHandeler.BringInNarrator(AN43, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA43, CallB28);
+        _narratorHandeler.BringInNarrator(AN43, NarratorName.A, delayBetweenTwoNarrator, CallB28);
     }
     private void CallB28()
     {
-        _narratorHandeler.BringInNarrator(BN28, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB28, CallA29);
+        _narratorHandeler.BringInNarrator(BN28, NarratorName.B, delayBetweenTwoNarrator, CallA29);
     }
 
     private void CallA29()
     {
-        _narratorHandeler.BringInNarrator(AN29, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA29, CallB30);
+        _narratorHandeler.BringInNarrator(AN29, NarratorName.A, delayBetweenTwoNarrator, CallB30);
     }
 
     private void CallB30()
     {
-        _narratorHandeler.BringInNarrator(BN30, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB30, CallA31);
+        _narratorHandeler.BringInNarrator(BN30, NarratorName.B, delayBetweenTwoNarrator, CallA31);
     }
 
     private void CallA31()
     {
-        _narratorHandeler.BringInNarrator(AN31, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA31, CallB34);
+        _narratorHandeler.BringInNarrator(AN31, NarratorName.A, delayBetweenTwoNarrator, CallB34);
     }
     //private void CallB32()
     //{
@@ -370,12 +370,12 @@ public class GameManager : MonoBehaviour
     //}
     private void CallB34()
     {
-        _narratorHandeler.BringInNarrator(BN34, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB34, CallA35);
+        _narratorHandeler.BringInNarrator(BN34, NarratorName.B, delayBetweenTwoNarrator, CallA35);
     }
 
     private void CallA35()
     {
-        _narratorHandeler.BringInNarrator(AN35, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA35, CallImageForPutAway);
+        _narratorHandeler.BringInNarrator(AN35, NarratorName.A, delayBetweenTwoNarrator, CallImageForPutAway);
     }
     private void CallImageForPutAway()
     {
@@ -383,19 +383,19 @@ public class GameManager : MonoBehaviour
     }
     private void CallBStorage1()
     {
-        _narratorHandeler.BringInNarrator(BStorage1, NarratorName.B, delayBetweenTwoNarrator, AudioName.BStorage1, CallAStorage2);
+        _narratorHandeler.BringInNarrator(BStorage1, NarratorName.B, delayBetweenTwoNarrator, CallAStorage2);
     }
     private void CallAStorage2()
     {
-        _narratorHandeler.BringInNarrator(AStorage2, NarratorName.A, delayBetweenTwoNarrator, AudioName.AStorage2, CallB36);
+        _narratorHandeler.BringInNarrator(AStorage2, NarratorName.A, delayBetweenTwoNarrator, CallB36);
     }
     private void CallB36()
     {
-        _narratorHandeler.BringInNarrator(BN36, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB36, CallA37);
+        _narratorHandeler.BringInNarrator(BN36, NarratorName.B, delayBetweenTwoNarrator, CallA37);
     }
     private void CallA37()
     {
-        _narratorHandeler.BringInNarrator(AN37, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA37, CallImageForOutbound);
+        _narratorHandeler.BringInNarrator(AN37, NarratorName.A, delayBetweenTwoNarrator, CallImageForOutbound);
     }
 
     private void CallImageForOutbound()
@@ -404,32 +404,32 @@ public class GameManager : MonoBehaviour
     }
     private void CallB38()
     {
-        _narratorHandeler.BringInNarrator(BN38, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB38, CallA39);
+        _narratorHandeler.BringInNarrator(BN38, NarratorName.B, delayBetweenTwoNarrator, CallA39);
     }
 
     private void CallA39()
     {
-        _narratorHandeler.BringInNarrator(AN39, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA39, CallB40);
+        _narratorHandeler.BringInNarrator(AN39, NarratorName.A, delayBetweenTwoNarrator, CallB40);
     }
     private void CallB40()
     {
-        _narratorHandeler.BringInNarrator(BN40, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB40, CallB44);//CallB41 to skip receiving process
+        _narratorHandeler.BringInNarrator(BN40, NarratorName.B, delayBetweenTwoNarrator, CallB44);//CallB41 to skip receiving process
     }
     private void CallB44()
     {
-        _narratorHandeler.BringInNarrator(BN44, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB44, CallA45);
+        _narratorHandeler.BringInNarrator(BN44, NarratorName.B, delayBetweenTwoNarrator, CallA45);
     }
     private void CallA45()
     {
-        _narratorHandeler.BringInNarrator(AN45, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA45, CallB46);
+        _narratorHandeler.BringInNarrator(AN45, NarratorName.A, delayBetweenTwoNarrator, CallB46);
     }
     private void CallB46()
     {
-        _narratorHandeler.BringInNarrator(BN46, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB46, CallA47);
+        _narratorHandeler.BringInNarrator(BN46, NarratorName.B, delayBetweenTwoNarrator, CallA47);
     }
     private void CallA47()
     {
-        _narratorHandeler.BringInNarrator(AN47, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA47, CallImageForPicking);
+        _narratorHandeler.BringInNarrator(AN47, NarratorName.A, delayBetweenTwoNarrator, CallImageForPicking);
     }
 
     private void CallImageForPicking()
@@ -438,28 +438,28 @@ public class GameManager : MonoBehaviour
     }
     private void CallB48()
     {
-        _narratorHandeler.BringInNarrator(BN48, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB48, CallA49);
+        _narratorHandeler.BringInNarrator(BN48, NarratorName.B, delayBetweenTwoNarrator, CallA49);
     }
     private void CallA49()
     {
-        _narratorHandeler.BringInNarrator(AN49, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA49, CallB50);
+        _narratorHandeler.BringInNarrator(AN49, NarratorName.A, delayBetweenTwoNarrator, CallB50);
     }
     private void CallB50()
     {
-        _narratorHandeler.BringInNarrator(BN50, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB50, CallA51);
+        _narratorHandeler.BringInNarrator(BN50, NarratorName.B, delayBetweenTwoNarrator, CallA51);
     }
     private void CallA51()
     {
-        _narratorHandeler.BringInNarrator(AN51, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA51, CallB52);
+        _narratorHandeler.BringInNarrator(AN51, NarratorName.A, delayBetweenTwoNarrator, CallB52);
     }
     private void CallB52()
     {
-        _narratorHandeler.BringInNarrator(BN52, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB52, callLookImage);
+        _narratorHandeler.BringInNarrator(BN52, NarratorName.B, delayBetweenTwoNarrator, callLookImage);
     }
 
     private void callLookImage()
     {
-        _narratorHandeler.BringInNarrator(AN42, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA42, callimageforwharehouseTransport);
+        _narratorHandeler.BringInNarrator(AN42, NarratorName.A, delayBetweenTwoNarrator, callimageforwharehouseTransport);
     }
     private void callimageforwharehouseTransport()
     {
@@ -467,11 +467,11 @@ public class GameManager : MonoBehaviour
     }
     private void CallA53()
     {
-        _narratorHandeler.BringInNarrator(AN53, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA53, CallB54);
+        _narratorHandeler.BringInNarrator(AN53, NarratorName.A, delayBetweenTwoNarrator, CallB54);
     }
     private void CallB54()
     {
-        _narratorHandeler.BringInNarrator(BN38, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB38, BringWarehouseCompletePanel);
+        _narratorHandeler.BringInNarrator(BN38, NarratorName.B, delayBetweenTwoNarrator, BringWarehouseCompletePanel);
     }
     private void BringWarehouseCompletePanel()
     {

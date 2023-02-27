@@ -22,6 +22,7 @@ namespace Ui.Narrator
         [SerializeField] private Image textContainerImagB;
         [SerializeField] private Color[] randomColor;
         private string _narratorText;
+        private NarratorName _narratorName;
         private float _fadeDuration = 0.4f;
         private const float narratorOutDelay = 0.2f;
         private const float audioFinishDelay = 0.5f;
@@ -32,10 +33,11 @@ namespace Ui.Narrator
             _canvasGroupB.UpdateState(false, 0);
         }
 
-        internal void BringInNarrator(string narratorText,NarratorName narratorName= NarratorName.NotSet, float delay = 1f, AudioName audioName = AudioName.NotSet,
+        internal void BringInNarrator(string narratorText,NarratorName narratorName= NarratorName.NotSet, float delay = 1f,
                Action onCompleteNarrator = null)
         {
-            if(narratorName == NarratorName.A)
+            _narratorName = narratorName;
+            if (narratorName == NarratorName.A)
             {
                 _canvasGroup = _canvasGroupA;
                 panelText = panelTextA;
@@ -52,28 +54,26 @@ namespace Ui.Narrator
             int randomInt = UnityEngine.Random.Range(0, randomColor.Length);
             textContainerImage.color = randomColor[randomInt];
             _onCompleteNarrator = onCompleteNarrator;
-            _canvasGroup.UpdateState(true, delay , ()=>BringOnNarratorComplete(audioName));
+            _canvasGroup.UpdateState(true, delay , ()=>BringOnNarratorComplete());
         }
 
-        private void BringOnNarratorComplete(AudioName audioName)
+        private void BringOnNarratorComplete()
         {
-            GenericAudioManager.Instance.PlaySound(audioName);
             if (_onCompleteNarrator != null)
             {
-                Invoke(nameof(CallOnCompleteNarrator), GenericAudioManager.Instance.GetAudioLength(audioName) + audioFinishDelay);
+                CallOnCompleteNarrator();
             }
         }
 
         private void CallOnCompleteNarrator()
         {
-                 BringOutNarrator(narratorOutDelay);            
+            TTSManager.Instance.ReadCanvas(_narratorText, _narratorName, () => BringOutNarrator(narratorOutDelay));
         }
 
         internal void BringOutNarrator(float delay = 1f)
         {
             _canvasGroup.UpdateState(false, delay, ()=> {
                 _onCompleteNarrator();
-                //_onCompleteNarrator = null;
             });
         }
 
@@ -83,6 +83,8 @@ namespace Ui.Narrator
 public enum NarratorName
 {
     NotSet = -1,
+    //For Male
     A = 0,
+    //For Female
     B = 1,
 }
