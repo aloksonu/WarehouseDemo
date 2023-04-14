@@ -12,18 +12,20 @@ public class GameManager : MonoBehaviour
     private const string BN02 = "I’m good, How was you’re weekend?";
     private const string AN03 = "Great! Thanks for asking. Hope you had a great weekend too!";
     private const string AN09 = "So, what are you working on nowadays?";
-    private const string BN10 = "Oh! It’s just a new project that was assigned to me, but I’ve no idea about it. " +
-        "I’m hoping to find someone who knows about the field, my client is into.";
+    //private const string BN10 = "Oh! It’s just a new project that was assigned to me, but I’ve no idea about it. " +
+    //    "I’m hoping to find someone who knows about the field, my client is into.";
+    private const string BN10 = "Oh! It’s just a new project that was assigned to me. Can you help me?";
     private const string AN11 = "what’s that?";
     private const string BN12 = "They are into Warehouse Automation";
     private const string AN13 = "Is that so? Don’t worry then, I’ll help you out";
 
-    private const string BN14 = "You serious? You’ve idea about this field? It’d be really helpful if you can guide me.";
-    private const string AN15 = "Yes I can. I’ve been working in the similar field for over a decade now. So ask me and I will try my best to explain.";
-    private const string BN18 = "Thanks again for the offer. Let me just get my notepad as I’ve somethings I need answers for." +
-        " If it works for you I can ask them one by one.";
-    private const string AN19 = "Yeah no worries";
+    //private const string BN14 = "You serious? You’ve idea about this field? It’d be really helpful if you can guide me.";
+    //private const string AN15 = "Yes I can. I’ve been working in the similar field for over a decade now. So ask me and I will try my best to explain.";
+    //private const string BN18 = "Thanks again for the offer. Let me just get my notepad as I’ve somethings I need answers for." +
+    //    " If it works for you I can ask them one by one.";
+    //private const string AN19 = "Yeah no worries";
 
+    //private const string BN18 = "Thanks again for the offer."; // if require add later
     private const string BN20 = "So, Let’s start with the basics what’s a warehouse? What’re they’re types? Can you explain them to me?"; //Audio
 
 
@@ -181,31 +183,31 @@ public class GameManager : MonoBehaviour
 
     private void CallA13()
     {
-        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA13, CallB14);
+        _narratorHandeler.BringInNarrator(AN13, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA13, CallB20);
     }
 
 
-    private void CallB14()
-    {
-        _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB14, CallA15);
-    }
+    //private void CallB14()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN14, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB14, CallA15);
+    //}
 
 
-    private void CallA15()
-    {
-        _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA15, CallB18);
-    }
+    //private void CallA15()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN15, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA15, CallB18);
+    //}
 
-    private void CallB18()
-    {
-        _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB18, CallA19);
-    }
+    //private void CallB18()
+    //{
+    //    _narratorHandeler.BringInNarrator(BN18, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB18, CallA19);
+    //}
 
 
-    private void CallA19()
-    {
-        _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA19, CallB20);
-    }
+    //private void CallA19()
+    //{
+    //    _narratorHandeler.BringInNarrator(AN19, NarratorName.A, delayBetweenTwoNarrator, AudioName.NA19, CallB20);
+    //}
     private void CallB20()
     {
         _narratorHandeler.BringInNarrator(BN20, NarratorName.B, delayBetweenTwoNarrator, AudioName.NB20, CallA211);
