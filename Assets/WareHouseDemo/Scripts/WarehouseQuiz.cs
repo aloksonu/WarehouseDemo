@@ -1,5 +1,4 @@
 using GamePlay.Quiz;
-using UnityEngine;
 using Utilities;
 
 public class WarehouseQuiz : MonoSingleton<WarehouseQuiz>

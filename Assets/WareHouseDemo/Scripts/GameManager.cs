@@ -2,6 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using Ui.Narrator;
 using Audio.Warehouse;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -124,19 +125,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject characterGirl;
 
     [SerializeField] NarratorHandler _narratorHandeler;
-
+    [SerializeField] private Button btnPlay;
     private const float timeToHoldMAx = 6f;
     private const float delayBetweenTwoNarrator = 0.2f;
 
     void Start()
     {
-        BringCharacterInView();
-
-        //GenericAudioManager.Instance.PlaySound(AudioName.IntroBoy);
+        btnPlay.onClick.AddListener(BringCharacterInView);
+        //BringCharacterInView();
     }
 
     private void BringCharacterInView()
     {
+        btnPlay.gameObject.SetActive(false);
         characterBoy.GetComponent<Transform>().DOMoveX(-4.25f, 2f);
         characterGirl.GetComponent<Transform>().DOMoveX(4.25f, 2f);
         Invoke(nameof(CallA01), 2.2f);
