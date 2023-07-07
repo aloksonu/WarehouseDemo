@@ -1,42 +1,45 @@
-using UnityEngine.UI;
-using UnityEngine;
-using Utilities;
 using System;
+using UnityEngine;
+using UnityEngine.UI;
+using Utilities;
 
-public class ImageHandeler : MonoSingleton<ImageHandeler>
+namespace WareHouseDemo.Scripts
 {
-    private static Action _onComplete;
-    [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private Image img;
-    private const float imageInOutDelay = 0.2f;
-
-    void Start()
+    public class ImageHandeler : MonoSingleton<ImageHandeler>
     {
-        canvasGroup.UpdateState(false, 0);
-    }
+        private static Action _onComplete;
+        [SerializeField] private CanvasGroup canvasGroup;
+        [SerializeField] private Image img;
+        private const float imageInOutDelay = 0.2f;
 
-    private void OnDestroy()
-    {
+        void Start()
+        {
+            canvasGroup.UpdateState(false, 0);
+        }
 
-        canvasGroup.UpdateState(false, 0);
-    }
+        private void OnDestroy()
+        {
 
-    internal void BringPanel(Sprite spr , Action onComplete = null)
-    {
-        img.sprite = spr;
-        _onComplete = onComplete;
-        canvasGroup.UpdateState(true, imageInOutDelay);
-        Invoke(nameof(BringOutPanel), 5);
-    }
+            canvasGroup.UpdateState(false, 0);
+        }
 
-    internal void BringOutPanel()
-    {
-        canvasGroup.UpdateState(false, imageInOutDelay, ()=> {
+        internal void BringPanel(Sprite spr , Action onComplete = null)
+        {
+            img.sprite = spr;
+            _onComplete = onComplete;
+            canvasGroup.UpdateState(true, imageInOutDelay);
+            Invoke(nameof(BringOutPanel), 5);
+        }
+
+        internal void BringOutPanel()
+        {
+            canvasGroup.UpdateState(false, imageInOutDelay, ()=> {
             
-            if(_onComplete != null) { 
-            _onComplete();
-            _onComplete = null;
-            }
-        });
+                if(_onComplete != null) { 
+                    _onComplete();
+                    _onComplete = null;
+                }
+            });
+        }
     }
 }

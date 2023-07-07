@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using Utilities;
 
-namespace Ui.ScoreSystem
+namespace WareHouseDemo.Scripts.Score
 {
     public class ScoreManager : MonoSingleton<ScoreManager>
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using Utilities;
-using Audio.Warehouse;
+using WareHouseDemo.Scripts.Audio;
 
 namespace Ui.Narrator
 {

@@ -1,4 +1,4 @@
-﻿namespace Audio.Warehouse
+﻿namespace WareHouseDemo.Scripts.Audio
 {
     public enum AudioName
     {

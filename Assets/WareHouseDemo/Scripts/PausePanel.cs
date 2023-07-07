@@ -1,67 +1,70 @@
-using Audio.Warehouse;
 using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Utilities;
+using WareHouseDemo.Scripts.Audio;
 
-public class PausePanel : MonoSingleton<PausePanel>
+namespace WareHouseDemo.Scripts
 {
-    private static Action _onComplete;
-    [SerializeField] private CanvasGroup _canvasGroup;
-    [SerializeField] private Button btnResume,btnRetry;
-    private float _fadeDuration = 0.1f;
-    void Start()
+    public class PausePanel : MonoSingleton<PausePanel>
     {
-        btnResume.onClick.AddListener(() => StartCoroutine(OnClickResumeButton()));
-        btnRetry.onClick.AddListener(() => StartCoroutine(OnClickRetryButton()));
-        _canvasGroup.UpdateState(false, 0);
-    }
-
-    private void OnDestroy()
-    {
-        btnResume.onClick.RemoveAllListeners();
-        btnRetry.onClick.RemoveAllListeners();
-    }
-
-    internal void OnClickPauseButton()
-    {
-        StartCoroutine(_OnClickPauseButton());
-    }
-
-    private IEnumerator _OnClickPauseButton()
-    {
-        AudioListener.pause = true;
-       // GenericAudioManager.Instance.PlaySound(AudioName.ButtonClick);
-        yield return new WaitForSeconds(0.0f);
-        if (Time.timeScale == 1)
+        private static Action _onComplete;
+        [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private Button btnResume,btnRetry;
+        private float _fadeDuration = 0.1f;
+        void Start()
         {
-            _canvasGroup.UpdateState(true, _fadeDuration,()=> {
+            btnResume.onClick.AddListener(() => StartCoroutine(OnClickResumeButton()));
+            btnRetry.onClick.AddListener(() => StartCoroutine(OnClickRetryButton()));
+            _canvasGroup.UpdateState(false, 0);
+        }
 
-                Time.timeScale = 0;
+        private void OnDestroy()
+        {
+            btnResume.onClick.RemoveAllListeners();
+            btnRetry.onClick.RemoveAllListeners();
+        }
+
+        internal void OnClickPauseButton()
+        {
+            StartCoroutine(_OnClickPauseButton());
+        }
+
+        private IEnumerator _OnClickPauseButton()
+        {
+            AudioListener.pause = true;
+            // GenericAudioManager.Instance.PlaySound(AudioName.ButtonClick);
+            yield return new WaitForSeconds(0.0f);
+            if (Time.timeScale == 1)
+            {
+                _canvasGroup.UpdateState(true, _fadeDuration,()=> {
+
+                    Time.timeScale = 0;
+                });
+            }
+
+        }
+        private IEnumerator OnClickResumeButton()
+        {
+            Time.timeScale = 1;
+            //GenericAudioManager.Instance.PlaySound(AudioName.ButtonClick);
+            yield return new WaitForSeconds(0.0f);
+            _canvasGroup.UpdateState(false, _fadeDuration,()=> {
+                AudioListener.pause = false;
             });
         }
 
-    }
-    private IEnumerator OnClickResumeButton()
-    {
-        Time.timeScale = 1;
-        //GenericAudioManager.Instance.PlaySound(AudioName.ButtonClick);
-        yield return new WaitForSeconds(0.0f);
-        _canvasGroup.UpdateState(false, _fadeDuration,()=> {
+        private IEnumerator OnClickRetryButton()
+        {
+            //GenericAudioManager.Instance.PlaySound(AudioName.ButtonClick);
+            yield return new WaitForSeconds(0);
+            Time.timeScale = 1;
+            GenericAudioManager.Instance.StopAllSounds();
+            SceneManager.LoadSceneAsync("WareHouse");
             AudioListener.pause = false;
-        });
-    }
-
-    private IEnumerator OnClickRetryButton()
-    {
-        //GenericAudioManager.Instance.PlaySound(AudioName.ButtonClick);
-        yield return new WaitForSeconds(0);
-        Time.timeScale = 1;
-        GenericAudioManager.Instance.StopAllSounds();
-        SceneManager.LoadSceneAsync("WareHouse");
-        AudioListener.pause = false;
-       // _canvasGroup.UpdateState(false, 0);
+            // _canvasGroup.UpdateState(false, 0);
+        }
     }
 }
